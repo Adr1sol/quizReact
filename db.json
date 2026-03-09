@@ -29,32 +29,11 @@
       "rol": "cliente"
     },
     {
-      "id": "99b3",
-      "nombre": "sofi",
-      "clave": "123",
+      "nombre": "sofia",
       "correo": "sofi@gmail.com",
-      "rol": "cliente"
-    },
-    {
-      "id": "a0f3",
-      "nombre": "sofi",
+      "rol": "cliente",
       "clave": "123",
-      "correo": "sofi@gmail.com",
-      "rol": "cliente"
-    },
-    {
-      "id": "a1f7",
-      "nombre": "sofi",
-      "clave": "123",
-      "correo": "sofi@gmail.com",
-      "rol": "cliente"
-    },
-    {
-      "id": "4263",
-      "nombre": "sofi",
-      "clave": "123",
-      "correo": "sofi@gmail.com",
-      "rol": "cliente"
+      "id": "4263"
     },
     {
       "id": "9437",
@@ -82,27 +61,6 @@
       "nombre": "sofi",
       "clave": "123",
       "correo": "sofi@gmail.com",
-      "rol": "cliente"
-    },
-    {
-      "id": "2c7c",
-      "nombre": "sofi",
-      "clave": "123",
-      "correo": "sofi@gmail.com",
-      "rol": "cliente"
-    },
-    {
-      "id": "981c",
-      "nombre": "sofi",
-      "clave": "123",
-      "correo": "sofi@gmail.com",
-      "rol": "cliente"
-    },
-    {
-      "id": "2e73",
-      "nombre": "Amanda",
-      "clave": "123",
-      "correo": "amanda@gmail.com",
       "rol": "cliente"
     }
   ],

@@ -31,6 +31,7 @@ function Navbar({ rol }) {
                     <>
                         <button onClick={() => navigate("/perfil")} className={styles.navBtn}>Perfil</button>
                         <button onClick={() => navigate("/dashboard")} className={styles.navBtn}>Productos</button>
+                         <button onClick={() => navigate("/usuarios")} className={styles.navBtn}>Usuarios</button>
                         <button onClick={cerrarSesion} className={styles.navBtnCerrar}>Cerrar Sesión</button>
                     </>
                 )}
