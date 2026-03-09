@@ -1,0 +1,132 @@
+{
+  "usuarios": [
+    {
+      "id": "1f82",
+      "nombre": "admin",
+      "clave": "super",
+      "correo": "admin@gmail.com",
+      "rol": "admin"
+    },
+    {
+      "id": "586f",
+      "nombre": "Cata",
+      "clave": "123",
+      "correo": "c@gmail.com",
+      "rol": "admin"
+    },
+    {
+      "id": "0c4c",
+      "nombre": "lis",
+      "clave": "123",
+      "correo": "lis@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "f083",
+      "nombre": "tom",
+      "clave": "123",
+      "correo": "tom@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "99b3",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "a0f3",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "a1f7",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "4263",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "9437",
+      "nombre": "lidi",
+      "clave": "123",
+      "correo": "lidi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "0aa3",
+      "nombre": "lidi",
+      "clave": "123",
+      "correo": "lidi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "08a2",
+      "nombre": "lidi",
+      "clave": "123",
+      "correo": "lidi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "7201",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "2c7c",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "981c",
+      "nombre": "sofi",
+      "clave": "123",
+      "correo": "sofi@gmail.com",
+      "rol": "cliente"
+    },
+    {
+      "id": "2e73",
+      "nombre": "Amanda",
+      "clave": "123",
+      "correo": "amanda@gmail.com",
+      "rol": "cliente"
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Harina",
+      "precio": "1000",
+      "categoria": "granos",
+      "cantidad": "2",
+      "id": "eb5c"
+    },
+    {
+      "nombre": "Fresco leche",
+      "precio": "400",
+      "categoria": "lacteos",
+      "cantidad": "2",
+      "id": "3232"
+    },
+    {
+      "nombre": "Pan cuadrado",
+      "precio": "1500",
+      "categoria": "granos",
+      "cantidad": "5",
+      "id": "1add"
+    }
+  ]
+}

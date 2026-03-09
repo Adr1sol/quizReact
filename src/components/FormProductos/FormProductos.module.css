@@ -1,0 +1,77 @@
+.contenedor {
+    padding: 30px 40px;
+    background-color: #111827;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.titulo {
+    font-size: 22px;
+    color: #34d399;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.input {
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    flex: 1;
+    min-width: 150px;
+}
+
+.input:focus {
+    border-color: rgba(52,211,153,0.6);
+}
+
+.select {
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    flex: 1;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.select:focus {
+    border-color: rgba(52,211,153,0.6);
+}
+
+.boton {
+    background-color: #34d399;
+    color: #0f0f0f;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.boton:hover {
+    background-color: #059669;
+    color: #ffffff;
+}
+
+.select option {
+    background-color: #1f2937;
+    color: #ffffff;
+}

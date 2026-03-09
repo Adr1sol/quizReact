@@ -1,0 +1,57 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background-color: rgba(15,15,15,0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.navMarca {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a5b4fc;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 8px;
+}
+
+.navBtn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.navBtn:hover {
+    background-color: rgba(99,102,241,0.2);
+    border-color: rgba(99,102,241,0.5);
+    color: #a5b4fc;
+}
+
+.navBtnCerrar {
+    background: transparent;
+    border: 1px solid rgba(248,113,113,0.3);
+    color: #f87171;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.navBtnCerrar:hover {
+    background-color: rgba(248,113,113,0.1);
+}

@@ -1,0 +1,61 @@
+.contenedor {
+    padding: 40px;
+    background-color: #111827;
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+}
+
+.titulo {
+    font-size: 22px;
+    color: #a5b4fc;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.tarjeta {
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 400px;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.fila:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.valor {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.badge {
+    background-color: rgba(99,102,241,0.15);
+    color: #a5b4fc;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid rgba(99,102,241,0.3);
+}
+
+.cargando {
+    color: rgba(255,255,255,0.4);
+    font-size: 15px;
+}
