@@ -62,6 +62,13 @@
       "clave": "123",
       "correo": "sofi@gmail.com",
       "rol": "cliente"
+    },
+    {
+      "id": "cb35",
+      "nombre": "Cata",
+      "clave": "123",
+      "correo": "cata@gmail.com",
+      "rol": "admin"
     }
   ],
   "productos": [

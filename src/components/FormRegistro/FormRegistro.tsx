@@ -1,15 +1,24 @@
 import React, { useState } from 'react'
 import ServiceUser from "../../services/ServiceUser"
 import { useNavigate } from "react-router-dom"
-import styles from './FormRegistro.module.css'
+import  './FormRegistro.module.css'
+
+type Registro = {
+    nombre: string,
+    clave: string,
+    correo: string,
+    rol: string
+}
+
+
 
 function FormRegistro() {
 
-    const [nombreUsuario, setNombreUsuario] = useState("")
-    const [claveUsuario, setClaveUsuario] = useState("")
-    const [correoUsuario, setCorreoUsuario] = useState("")
-    const [rolUsuario, setrolUsuario] = useState("cliente")
-    const [mensaje, setMensaje] = useState("")
+    const [nombreUsuario, setNombreUsuario] = useState<string>("")
+    const [claveUsuario, setClaveUsuario] = useState<string>("")
+    const [correoUsuario, setCorreoUsuario] = useState<string>("")
+    const [rolUsuario, setrolUsuario] = useState<string>("cliente")
+    const [mensaje, setMensaje] = useState<string>("")
     const navigate = useNavigate()
 
     async function registroUsuario() {
@@ -19,7 +28,7 @@ function FormRegistro() {
             return
         }
 
-        const objRegistro = {
+        const objRegistro: Registro = {
             nombre: nombreUsuario,
             clave: claveUsuario,
             correo: correoUsuario,
@@ -53,46 +62,46 @@ function FormRegistro() {
     }
 
     return (
-        <div className={styles.contenedor}>
-            <h2 className={styles.titulo}>Crear Cuenta</h2>
+        <div className="contenedor">
+            <h2 className="titulo">Crear Cuenta</h2>
 
-            <p className={styles.label}>Nombre Completo</p>
+            <p className="label">Nombre Completo</p>
             <input
-                className={styles.input}
+                className="input"
                 type="text"
                 value={nombreUsuario}
                 onChange={(evento) => setNombreUsuario(evento.target.value)}
             />
 
-            <p className={styles.label}>Contraseña</p>
+            <p className="label">Contraseña</p>
             <input
-                className={styles.input}
+                className="input"
                 type="password"
                 value={claveUsuario}
                 onChange={(evento) => setClaveUsuario(evento.target.value)}
             />
 
-            <p className={styles.label}>Correo Electrónico</p>
+            <p className="label">Correo Electrónico</p>
             <input
-                className={styles.input}
+                className="input"
                 type="text"
                 value={correoUsuario}
                 onChange={(evento) => setCorreoUsuario(evento.target.value)}
             />
 
-            <p className={styles.label}>Rol</p>
+            <p className="label">Rol</p>
             <select
-                className={styles.select}
+                className="select"
                 value={rolUsuario}
                 onChange={(evento) => setrolUsuario(evento.target.value)}>
                 <option value="cliente">Cliente</option>
                 <option value="admin">Admin</option>
             </select>
 
-            <button className={styles.boton} onClick={registroUsuario}>Guardar</button>
+            <button className="boton" onClick={registroUsuario}>Guardar</button>
 
             {mensaje && (
-                <div className={mensaje.includes("exitosamente") ? styles.mensajeExito : styles.mensajeError}>
+                <div className={mensaje.includes("exitosamente") ? "mensajeExito" : "mensajeError"}>
                     {mensaje}
                 </div>
             )}

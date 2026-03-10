@@ -1,13 +1,25 @@
 import { useState, useEffect } from "react"
 import ServiceProductos from "../../services/ServiceProductos"
 import Swal from "sweetalert2"
-import styles from './FormProductos.module.css'
+import './FormProductos.module.css'
 
-const FormProductos = ({ onProductoAgregado, productoEditar }) => {
-    const [nombreProducto, setNombreProducto] = useState("")
-    const [precioProducto, setPrecioProducto] = useState("")
-    const [categoriaProducto, setCategoriaProducto] = useState("")
-    const [cantidadProducto, setCantidadProducto] = useState("")
+type Producto = {
+    nombre: string,
+    precio: string,
+    categoria: string,
+    cantidad: string
+}
+
+interface Props {
+    onProductoAgregado: () => void
+    productoEditar: any | null
+}
+
+const FormProductos = ({ onProductoAgregado, productoEditar }: Props) => {
+    const [nombreProducto, setNombreProducto] = useState<string>("")
+    const [precioProducto, setPrecioProducto] = useState<string>("")
+    const [categoriaProducto, setCategoriaProducto] = useState<string>("")
+    const [cantidadProducto, setCantidadProducto] = useState<string>("")
 
     useEffect(() => {
         if (productoEditar) {
@@ -24,7 +36,7 @@ const FormProductos = ({ onProductoAgregado, productoEditar }) => {
     }, [productoEditar])
 
     async function subirProducto() {
-        const objProducto = {
+        const objProducto : Producto = {
             nombre: nombreProducto,
             precio: precioProducto,
             categoria: categoriaProducto,
@@ -62,28 +74,28 @@ const FormProductos = ({ onProductoAgregado, productoEditar }) => {
     }
 
     return (
-        <div className={styles.contenedor}>
-            <h2 className={styles.titulo}>
+        <div className="contenedor">
+            <h2 className="titulo">
                 {productoEditar ? "Editar Producto" : "Dashboard Admin"}
             </h2>
 
-            <div className={styles.formulario}>
+            <div className="formulario">
                 <input
-                    className={styles.input}
+                    className="input"
                     type="text"
                     value={nombreProducto}
                     placeholder="Nombre producto"
                     onChange={(e) => setNombreProducto(e.target.value)}
                 />
                 <input
-                    className={styles.input}
+                    className="input"
                     type="text"
                     value={precioProducto}
                     placeholder="Precio producto"
                     onChange={(e) => setPrecioProducto(e.target.value)}
                 />
                 <select
-                    className={styles.select}
+                    className="select"
                     value={categoriaProducto}
                     onChange={(e) => setCategoriaProducto(e.target.value)}>
                     <option value="">Seleccione la categoría</option>
@@ -92,13 +104,13 @@ const FormProductos = ({ onProductoAgregado, productoEditar }) => {
                     <option value="granos">Granos</option>
                 </select>
                 <input
-                    className={styles.input}
+                    className="intput"
                     type="text"
                     value={cantidadProducto}
                     placeholder="Cantidad producto"
                     onChange={(e) => setCantidadProducto(e.target.value)}
                 />
-                <button className={styles.boton} onClick={subirProducto}>
+                <button className="boton" onClick={subirProducto}>
                     {productoEditar ? "Modificar Producto" : "Agregar Producto"}
                 </button>
             </div>

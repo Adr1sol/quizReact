@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import ServiceUser from "../../services/ServiceUser"
 import { useNavigate } from "react-router-dom"
-import styles from './FormInicio.module.css'
+import './FormInicio.module.css'
 
 function FormInicio() {
 
-    const [nombreUsuario, setNombreUsuario] = useState("")
-    const [claveUsuario, setClaveUsuario] = useState("")
-    const [mensaje, setMensaje] = useState("")
-    const [rol, setrol] = useState("cliente")
+    const [nombreUsuario, setNombreUsuario] = useState<string>("")
+    const [claveUsuario, setClaveUsuario] = useState<string>("")
+    const [mensaje, setMensaje] = useState<string>("")
+    const [rol, setrol] = useState<string>("cliente")
     const navigate = useNavigate()
 
     async function inicioUsuario() {
@@ -21,7 +21,7 @@ function FormInicio() {
         const usuarios = await ServiceUser.getUsuarios()
 
         const usuarioEncontrado = usuarios.find(
-            (u) => u.nombre === nombreUsuario && u.clave === claveUsuario
+            (u : any) => u.nombre === nombreUsuario && u.clave === claveUsuario
         )
 
         if (usuarioEncontrado) {
@@ -29,7 +29,7 @@ function FormInicio() {
 
             // Espera 2 segundos y redirige según el rol
             setTimeout(() => {
-                if ( usuarioEncontrado.rol === "admin") {
+                if (usuarioEncontrado.rol === "admin") {
                     localStorage.setItem("rol", "admin")
                     localStorage.setItem("nombre", nombreUsuario)
                     navigate("/dashboard")
@@ -46,29 +46,29 @@ function FormInicio() {
     }
 
     return (
-         <div className={styles.contenedor}>
-            <h2 className={styles.titulo}>Inicio de Sesión</h2>
+        <div className="contenedor">
+            <h2 className="titulo">Inicio de Sesión</h2>
 
-            <p className={styles.label}>Nombre completo</p>
+            <p className="label">Nombre completo</p>
             <input
-                className={styles.input}
+                className="input"
                 type="text"
                 value={nombreUsuario}
                 onChange={(evento) => setNombreUsuario(evento.target.value)}
             />
 
-            <p className={styles.label}>Contraseña</p>
+            <p className="label">Contraseña</p>
             <input
-                className={styles.input}
+                className="input"
                 type="password"
                 value={claveUsuario}
                 onChange={(evento) => setClaveUsuario(evento.target.value)}
             />
 
-            <button className={styles.boton} onClick={inicioUsuario}>Entrar</button>
+            <button className="boton" onClick={inicioUsuario}>Entrar</button>
 
             {mensaje && (
-                <div className={mensaje.includes("incorrectos") ? styles.mensajeError : styles.mensajeExito}>
+                <div className={mensaje.includes("incorrectos") ? "mensajeError" : "mensajeExito"}>
                     {mensaje}
                 </div>
             )}
